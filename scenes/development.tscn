@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cav85hpcp1b8n"]
+
+[ext_resource type="Texture2D" uid="uid://br3n5eftibvob" path="res://icon.svg" id="1_clmmj"]
+[ext_resource type="Script" path="res://scripts/rave.gd" id="2_b0a4h"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_j8lq0"]
+size = Vector2(128, 128)
+
+[node name="Development" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(556, 281)
+texture = ExtResource("1_clmmj")
+script = ExtResource("2_b0a4h")
+cycles_per_second = 2.0
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(557, 121)
+mesh = SubResource("QuadMesh_j8lq0")
+script = ExtResource("2_b0a4h")
+cycles_per_second = 0.25

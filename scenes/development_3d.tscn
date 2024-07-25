@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce8urnhxbbcsu"]
+
+[ext_resource type="Script" path="res://scripts/rave_3d.gd" id="1_b6f4d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvbpn"]
+
+[node name="Development3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 2, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material = SubResource("StandardMaterial3D_gvbpn")
+script = ExtResource("1_b6f4d")
+_material = SubResource("StandardMaterial3D_gvbpn")
